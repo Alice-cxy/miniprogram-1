@@ -6,12 +6,15 @@
 </view> -->
 
 
-
-<view class="searchInput">
+<!-- 搜索 -->
+<!-- <view class="searchInput">
 <view class="searchContent">
 {{searchText}}
 </view>
-</view>
+</view> -->
+<search-input/>
+
+
 
 <!-- 普通写法 -->
 <!-- <view>

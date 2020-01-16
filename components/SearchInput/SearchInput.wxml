@@ -1,0 +1,7 @@
+<!--components/SearchInput/SearchInput.wxml-->
+<!-- <text>components/SearchInput/SearchInput.wxml</text> -->
+<view class="searchInput">
+<view class="searchContent">
+{{searchText}}
+</view>
+</view>
