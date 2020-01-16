@@ -1,0 +1,38 @@
+<!-- <view class="nav">
+<view class="item">项目</view>
+<view class="item">文件</view>
+<view class="item">编辑</view>
+<view class="item">工具</view>
+</view> -->
+
+
+
+<view class="searchInput">
+<view class="searchContent">
+{{searchText}}
+</view>
+</view>
+
+<!-- 普通写法 -->
+<!-- <view>
+{{message}}
+</view> -->
+
+<!-- 组件属性 -->
+<!-- <view id="item-{{id}}"></view>
+
+<checkbox checked="{{true}}"></checkbox>
+<checkbox checked="{{false}}"></checkbox>
+<checkbox checked=true></checkbox>
+<checkbox checked=false></checkbox> -->
+
+  <!-- 轮播图 开始 -->
+  <view class="index_swiper">
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+      <swiper-item wx:for="{{swiper_list}}" wx:key="goods_id">
+        <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
