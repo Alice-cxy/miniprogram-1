@@ -8,7 +8,8 @@ Page({
     message:"Hello MINA",
     id:1,
     swiper_list:[],
-    navs:[]
+    navs:[],
+    floors:[]
   },
 
   /**
@@ -28,9 +29,18 @@ Page({
     wx.request({
       url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
       success: (res) => {
-        console.log(res)
         this.setData({
           navs: res.data.message
+        })
+      }
+    })
+    //楼层页面获取数据
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+        floors: res.data.message
         })
       }
     })

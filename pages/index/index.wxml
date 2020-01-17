@@ -40,7 +40,7 @@
     </swiper>
   </view>
   <!-- 轮播图 结束 -->
-  
+
   <!-- 导航条 开始 -->
 <view class="index_navs">
 <navigator wx:for="{{navs}}" wx:key="index">
@@ -49,3 +49,21 @@
 </view>
 <!-- 导航条 开始 -->
 
+<!-- 楼层页面 开始 -->
+<view class="index_floors">
+<view class="group" wx:for="{{floors}}" wx:key="index">
+<!-- 楼层页面头部 开始 -->
+<view class="floors_title" wx:v-for="{{item}}" wx:key="index">
+<image src="{{item.floors_title.image_src}}"></image>
+</view>
+<!-- 楼层页面头部 结束 -->
+<!-- 楼层页面图片部分 开始 -->
+<view class="product_list">
+<navigator wx:for="{{i}}" wx:key="v">
+<image src="{{i.product_list.image_src}}"></image>
+</navigator>
+</view>
+<!-- 楼层页面图片部分 结束 -->
+</view>
+</view>
+<!-- 楼层页面 结束 -->
