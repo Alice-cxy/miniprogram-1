@@ -26,8 +26,8 @@
 
 <checkbox checked="{{true}}"></checkbox>
 <checkbox checked="{{false}}"></checkbox>
-<checkbox checked=true></checkbox>
-<checkbox checked=false></checkbox> -->
+<checkbox checked="true"></checkbox>
+<checkbox checked="false"></checkbox> -->
 
   <!-- 轮播图 开始 -->
   <view class="index_swiper">
@@ -39,3 +39,13 @@
       </swiper-item>
     </swiper>
   </view>
+  <!-- 轮播图 结束 -->
+  
+  <!-- 导航条 开始 -->
+<view class="index_navs">
+<navigator wx:for="{{navs}}" wx:key="index">
+<image src="{{item.image_src}}" mode="widthFix" ></image>
+</navigator>
+</view>
+<!-- 导航条 开始 -->
+

@@ -31,3 +31,18 @@ text-align: center;
   width: 100%;
   height: 340rpx;
 }
+.index_navs{
+  display: flex;
+  padding-top:12rpx;
+  padding-bottom: 43rpx; 
+}
+.index_navs navigator{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.index_navs navigator image{
+  width: 128rpx;
+  height: 140rpx;
+}

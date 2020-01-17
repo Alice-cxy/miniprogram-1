@@ -7,18 +7,30 @@ Page({
     searchText:"搜索",
     message:"Hello MINA",
     id:1,
-    swiper_list:[]
+    swiper_list:[],
+    navs:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取轮播图数据
     wx.request({
       url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
       success: (res) => {
         this.setData({
           swiper_list: res.data.message
+        })
+      }
+    })
+    //获取导航条数据
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          navs: res.data.message
         })
       }
     })
